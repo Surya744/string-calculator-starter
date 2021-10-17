@@ -18,14 +18,18 @@ class StringCalculator {
     	}
     	else {
     		
-    		return getSum(no[0],no[1]);
+    		return getSum(no);	
     		
     	}
 		
     }
     
-    private int getSum(String numA, String numB) {
-    	return  Integer.parseInt(numA) + Integer.parseInt(numB);
+    private int getSum(String[] no) 
+    {
+    	int sum = 0;
+    	for(String S: no)
+    		sum += Integer.parseInt(S);
+    	return  sum;
     }
 
 	private int stringToInt(String input) {
