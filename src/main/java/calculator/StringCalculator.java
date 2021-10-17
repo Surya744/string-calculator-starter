@@ -1,10 +1,12 @@
 package calculator;
 
 class StringCalculator {
+	
+	private final String delimiter = ",|\n";
 
     public int add(String input) {
     	
-    	String[] no = input.split(",");
+    	String[] no = input.split(delimiter);
         
     	if(isEmpty(input)) {
     		return 0;
@@ -16,11 +18,14 @@ class StringCalculator {
     	}
     	else {
     		
-    		return Integer.parseInt(no[0]) + Integer.parseInt(no[1]);
+    		return getSum(no[0],no[1]);
     		
     	}
 		
-   
+    }
+    
+    private int getSum(String numA, String numB) {
+    	return  Integer.parseInt(numA) + Integer.parseInt(numB);
     }
 
 	private int stringToInt(String input) {

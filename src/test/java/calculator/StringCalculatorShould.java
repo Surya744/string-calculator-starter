@@ -23,5 +23,11 @@ class StringCalculatorShould {
         StringCalculator stringCalculator = new StringCalculator();
         assertEquals(3, stringCalculator.add("1,2"));
     }
+    
+    @Test
+    void string_with_New_Line_Between_numbers_should_return_sum() {
+        StringCalculator stringCalculator = new StringCalculator();
+        assertEquals(3, stringCalculator.add("1\n2"));
+    }
 }
 
