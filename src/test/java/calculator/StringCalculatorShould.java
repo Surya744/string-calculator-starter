@@ -18,3 +18,4 @@ class StringCalculatorShould {
         assertEquals(1, stringCalculator.add("1"));
     }
 }
+
